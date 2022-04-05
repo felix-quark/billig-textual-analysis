@@ -1,2 +1,2 @@
-input_file = './data/sermon_affliction.txt'
-output_file = './data/sermon_affliction_stats.csv'
+input_file = './data/sermon_sheep_wolves.txt'
+output_file = './data/sermon_sheep_wolves_stats.csv'

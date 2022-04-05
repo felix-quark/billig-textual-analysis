@@ -6,14 +6,11 @@ import pandas as pd
 def parser(filepath: str) -> str:
     with open(filepath, 'r') as file:
         filestr = str(file.read())
-        # parse out quotations
-        regex = re.compile('"(.*?)"')
-        filestr = regex.sub(' ', filestr)
-        # parse out all non-alpha
-        regex = re.compile('[^a-zA-Z]')
-        filestr = regex.sub(' ', filestr)
+    # parse out all non-alpha
+    regex = re.compile(r'[^a-zA-Z]')
+    filestr = regex.sub(' ', filestr)
 
-        return filestr.lower()
+    return filestr.lower()
 
 
 def count_words(text: str) -> dict:
